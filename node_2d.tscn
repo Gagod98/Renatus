@@ -1,0 +1,209 @@
+[gd_scene load_steps=30 format=3 uid="uid://c8ovf73ffk4q3"]
+
+[ext_resource type="Script" uid="uid://dfyn8kejc4txw" path="res://scripts/character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dj7mqw34uwpwq" path="res://PJ1/PJ/0°.PNG" id="2_ei405"]
+[ext_resource type="Texture2D" uid="uid://xds4hv6mt4jv" path="res://PJ1/Arbol1_pl1/Arbolpeque1_pl1.png" id="2_hqns4"]
+[ext_resource type="Texture2D" uid="uid://74rf0w2oa5cw" path="res://PJ1/Correr_Izquierda/2.PNG" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://bnljnbx1x5nml" path="res://PJ1/Correr_Izquierda/1.PNG" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://dsi4td7kbdgqs" path="res://PJ1/Correr_Izquierda/5.PNG" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://cjbesqvmlu4km" path="res://PJ1/Correr_Derecha/2.PNG" id="6_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://cy8adptmg80at" path="res://PJ1/Correr_Derecha/1.PNG" id="7_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://c7afuq10teupy" path="res://PJ1/Correr_Izquierda/6.PNG" id="7_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://ccrkrup18uhew" path="res://PJ1/Correr_Derecha/5.PNG" id="8_hqns4"]
+[ext_resource type="Texture2D" uid="uid://dwnxpiioqrgwy" path="res://PJ1/Correr_Derecha/6.PNG" id="9_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://ck77f4bbsao4p" path="res://PJ1/Arbol1_pl1/pixil-frame-7.png" id="10_ir8iy"]
+[ext_resource type="Script" uid="uid://chr6jfa1qndag" path="res://scripts/arbol.gd" id="10_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://3rw7j0yyo00y" path="res://PJ1/PJ/180°.PNG" id="11_e8dv2"]
+[ext_resource type="Script" uid="uid://cijdys7cyh6te" path="res://scripts/arbol_1_f_1_pl_1.gd" id="12_0h7mo"]
+[ext_resource type="Script" uid="uid://b4prbgil6mw8v" path="res://scripts/sapo.gd" id="14_k73cj"]
+[ext_resource type="Texture2D" uid="uid://cmn8nuqtll1gg" path="res://PJ1/Sapo/sapo_up.png" id="14_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://b4fs2o34d480j" path="res://PJ1/Arbol1_pl1/Fondo.png" id="14_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://c6sj5ai8rathc" path="res://PJ1/Sapo/sapo_up2.png" id="15_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://ckkqkdw065b5u" path="res://PJ1/Sapo/sapo_iz2.png" id="17_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://xonbrws8t6cx" path="res://PJ1/Sapo/sapo_iz.png" id="18_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://boxhccdsjk3pi" path="res://PJ1/Arbol1_pl1/Capa de pintura 3.PNG" id="20_fs4d3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0h7mo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ei405")
+}],
+"loop": true,
+"name": &"RunDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": ExtResource("3_rj586")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4d7sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rj586")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ir8iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x0ka3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ir8iy")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_rj586")
+}],
+"loop": true,
+"name": &"RunLeft",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": ExtResource("6_4d7sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ir8iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4d7sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hqns4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x0ka3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hqns4")
+}, {
+"duration": 0.4,
+"texture": ExtResource("6_4d7sh")
+}],
+"loop": true,
+"name": &"RunRight",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_e8dv2")
+}],
+"loop": true,
+"name": &"RunUp",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
+radius = 14.0
+height = 28.0
+
+[sub_resource type="GDScript" id="GDScript_0e48y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ka3"]
+size = Vector2(9.5, 17.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqns4"]
+size = Vector2(6.8125, 17.25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ei405"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fs4d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7vxoj")
+}],
+"loop": true,
+"name": &"jump_right",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_rjqkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nr8wp")
+}],
+"loop": true,
+"name": &"jump_up",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2bti"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Pj1" type="CharacterBody2D" parent="."]
+position = Vector2(335, 374)
+script = ExtResource("1_0e48y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pj1"]
+z_index = 1
+position = Vector2(-48, -101)
+sprite_frames = SubResource("SpriteFrames_0h7mo")
+animation = &"RunDown"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pj1"]
+show_behind_parent = true
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_epypp")
+script = SubResource("GDScript_0e48y")
+
+[node name="arbol" type="StaticBody2D" parent="."]
+position = Vector2(443, 311)
+script = ExtResource("10_x0ka3")
+
+[node name="Sprite2D" type="Sprite2D" parent="arbol"]
+visibility_layer = 29
+position = Vector2(-104, -18)
+texture = ExtResource("10_ir8iy")
+centered = false
+offset = Vector2(0, -270)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arbol"]
+position = Vector2(-0.5, -5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_x0ka3")
+
+[node name="arbol1_f1_pl1" type="StaticBody2D" parent="."]
+position = Vector2(278, 138)
+script = ExtResource("12_0h7mo")
+
+[node name="Sprite2D" type="Sprite2D" parent="arbol1_f1_pl1"]
+position = Vector2(-27, -63)
+texture = ExtResource("2_hqns4")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arbol1_f1_pl1"]
+position = Vector2(-2, 1)
+scale = Vector2(1.2, 1)
+shape = SubResource("RectangleShape2D_hqns4")
+
+[node name="Sapo" type="CharacterBody2D" parent="."]
+position = Vector2(547, 84)
+script = ExtResource("14_k73cj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sapo"]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_ei405")
+animation = &"jump_up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sapo"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_d2bti")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
+texture = ExtResource("14_rjqkl")
+centered = false
+
+[node name="CapaDePintura3" type="Sprite2D" parent="."]
+position = Vector2(509, 2)
+texture = ExtResource("20_fs4d3")
+centered = false
