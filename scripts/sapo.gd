@@ -11,7 +11,7 @@ func _process(_delta):
 
 func _physics_process(delta: float) -> void:
 	var Direction: Vector2 = global_position.direction_to(Global.player.global_position)
-	velocity = Direction.normalized() * - speed
+	velocity = Direction.normalized() * speed
 	move_and_slide()
 	
 
